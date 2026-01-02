@@ -23,7 +23,7 @@
             localStorage.clear();
             document.getElementById('loading-gif').style.display = 'flex';
             setTimeout(function(){
-                window.location.href = '/home';
+                globalThis.location.href = '/home';
             }, 4000);
         }
         			document.addEventListener("DOMContentLoaded", function () {
